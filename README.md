@@ -99,6 +99,17 @@ python app.py
 http://127.0.0.1:5000
 ```
 
+## Screenshots
+
+### Homepage
+
+![AI Image Generator Homepage](screenshots/homepage.png)
+
+### Generated Image
+
+![Generated Image](<screenshots/Generated image.png>)
+
+
 ### Live Demo
 
 https://ai-image-generator-xtv1.onrender.com/
