@@ -103,7 +103,7 @@ http://127.0.0.1:5000
 
 ### Homepage
 
-![AI Image Generator Homepage](screenshots/homepage.png)
+![Homepage](screenshots/Homepage.png)
 
 ### Generated Image
 
