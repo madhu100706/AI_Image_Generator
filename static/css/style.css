@@ -1,0 +1,364 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef4ff;
+
+    color: #1e293b;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.12);
+
+    text-align: center;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+h1 {
+    font-size: 42px;
+
+    color: #2563eb;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+    font-size: 17px;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GENERATOR SECTION
+========================================= */
+
+.generator-section {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   PROMPT INPUT
+========================================= */
+
+#prompt {
+    width: 100%;
+
+    padding: 17px 18px;
+
+    border: 2px solid #dbe4f0;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    color: #1e293b;
+
+    background: #f8fafc;
+
+    transition: 0.3s;
+}
+
+
+#prompt:focus {
+    border-color: #2563eb;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+#prompt::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+#error-message {
+    min-height: 20px;
+
+    color: #dc2626;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    margin-left: 4px;
+}
+
+
+/* =========================================
+   GENERATE BUTTON
+========================================= */
+
+#generate-button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#generate-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+#generate-button:active {
+    transform: translateY(0);
+}
+
+
+/* Disabled state */
+
+#generate-button:disabled {
+    background: #94a3b8;
+
+    color: #ffffff;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   RESULT SECTION
+========================================= */
+
+.result-section {
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.result-section h2 {
+    font-size: 22px;
+
+    color: #334155;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   IMAGE CONTAINER
+========================================= */
+
+.image-container {
+    width: 100%;
+
+    min-height: 100px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   GENERATED IMAGE
+========================================= */
+
+#generated-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    height: auto;
+
+    margin: 0 auto 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+#download-button {
+    display: none;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    background: #10b981;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#download-button:hover {
+    background: #059669;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.20);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+
+    .container {
+        padding: 30px 20px;
+
+        border-radius: 16px;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+
+    #prompt {
+        font-size: 15px;
+
+        padding: 15px;
+    }
+
+
+    #generate-button {
+        font-size: 16px;
+    }
+
+
+    .result-section {
+        margin-top: 35px;
+    }
+
+
+    .result-section h2 {
+        font-size: 20px;
+    }
+
+
+    #download-button {
+        width: 100%;
+    }
+}

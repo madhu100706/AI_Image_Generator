@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title> AI Image Generator</title>
+        
+        <link rel = "stylesheet" href = "{{ url_for ('static',filename = 'css/style.css')}}">
+
+    </head>
+    <body>
+        <div class = "container">
+
+            <div class="hero-section">
+
+            <h1> ✨ AI Image Generator</h1>
+
+            <p class = "subtitle">
+                Turn your imagination into images using AI.
+            </p>
+
+            </div>
+
+
+        <div class = "generator-section"></div>
+
+        <input 
+        type = "text"
+        id = "prompt"
+        placeholder = "Enter your prompt"
+        >
+
+        <p id="error-message"></p>
+
+        <button id  = " generate-button" type = "button" >
+            ✨ Generate Image
+        </button>
+
+        </div>
+
+        <div class = "result-section">
+
+            <h2>Generated Image</h2>
+
+        <div class="image-container">
+        
+        <img id = "generated-image">
+
+        </div>
+
+        <a id = "download-button" download = "generated-image.png">
+            ↓ Download Image
+        </a>
+
+        </div>
+    </div>
+    
+    <script src ="{{ url_for('static', filename = 'js/script.js') }}"></script>
+    
+</body>
+</html>
